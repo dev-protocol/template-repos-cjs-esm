@@ -10,7 +10,10 @@
 		}
 	},
 	"files": [
-		"dist/*.mjs"
+		"dist",
+		"index.ts",
+		"rollup.config.js",
+		"tsconfig.json"
 	],
 	"types": "/dist/index.d.ts",
 	"scripts": {
@@ -20,28 +23,25 @@
 		"lint:eslint": "eslint . --ext .ts,.js --fix",
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
 		"prepare": "husky install",
-		"install": "npm run build"
+		"postinstall": "npm run build"
 	},
 	"author": "Dev Protocol",
 	"license": "MIT",
 	"dependencies": {
-		"ethers": "^5.6.8"
-	},
-	"devDependencies": {
 		"@rollup/plugin-commonjs": "^22.0.0",
 		"@rollup/plugin-node-resolve": "^13.3.0",
-		"@types/dotenv": "8.2.0",
-		"@types/node": "16.11.39",
+		"ethers": "^5.6.8",
+		"rimraf": "3.0.2",
+		"rollup": "^2.75.6"
+	},
+	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "5.27.1",
 		"@typescript-eslint/parser": "5.27.1",
-		"dotenv": "16.0.1",
 		"eslint": "7.32.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-functional": "3.7.2",
 		"husky": "7.0.4",
 		"prettier": "2.6.2",
-		"rimraf": "3.0.2",
-		"rollup": "^2.75.6",
 		"typescript": "4.7.3"
 	},
 	"repository": "git+https://github.com/dev-protocol/template-repos-ts.git",
