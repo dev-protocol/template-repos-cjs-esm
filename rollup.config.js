@@ -14,6 +14,6 @@ export default [
 				format: 'cjs',
 			},
 		],
-		plugins: [resolve(), commonjs()],
+		plugins: [resolve({ browser: true }), commonjs({ browser: true })],
 	},
 ]
