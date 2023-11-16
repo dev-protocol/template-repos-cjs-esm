@@ -1,23 +1,22 @@
 {
-	"name": "bundled-ethers",
+	"name": "template-repos-cjs-esm",
 	"version": "1.0.0",
-	"description": "Template repository for using TypeScript",
-	"main": "dist/index.cjs",
+	"description": "Template repository for convert Commonjs module to ES module",
+	"type": "module",
+	"main": "dist/index.js",
 	"exports": {
 		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs"
+			"default": "./dist/index.js"
 		}
 	},
 	"files": [
 		"dist",
 		"index.ts",
-		"rollup.config.js",
-		"tsconfig.json"
+		"rollup.config.js"
 	],
-	"types": "/dist/index.d.ts",
+	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "tsc && rollup -c",
+		"build": "rollup -c",
 		"prebuild": "rimraf dist",
 		"lint": "yarn lint:eslint && yarn lint:format",
 		"lint:eslint": "eslint . --ext .ts,.js --fix",
@@ -30,6 +29,7 @@
 	"dependencies": {
 		"@rollup/plugin-commonjs": "^25.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.0",
+		"@rollup/plugin-typescript": "^11.1.5",
 		"ethers": "^6.0.0",
 		"rimraf": "5.0.0",
 		"rollup": "^2.75.6"
@@ -44,9 +44,12 @@
 		"prettier": "3.1.0",
 		"typescript": "5.2.2"
 	},
-	"repository": "git+https://github.com/dev-protocol/template-repos-ts.git",
-	"bugs": {
-		"url": "https://github.com/dev-protocol/template-repos-ts/issues"
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/dev-protocol/template-repos-cjs-esm.git"
 	},
-	"homepage": "https://github.com/dev-protocol/template-repos-ts#readme"
+	"bugs": {
+		"url": "https://github.com/dev-protocol/template-repos-cjs-esm/issues"
+	},
+	"homepage": "https://github.com/dev-protocol/template-repos-cjs-esm#readme"
 }

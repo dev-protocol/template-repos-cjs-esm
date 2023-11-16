@@ -1,20 +1,5 @@
-# template-repos-ts
+# template-repos-cjs-esm
 
-Template repository for using TypeScript
-
-# Stack
-
-- npm client is [yarn](https://github.com/yarnpkg/yarn)
-- Testing is [ava](https://github.com/avajs/ava)
-- Linting is [eslint](https://github.com/eslint/eslint)
-- Basic lint rule set is [eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional)
-- Formatter is [prettier](https://github.com/prettier/prettier)
-- Pre-install utility is [ramda](https://github.com/ramda/ramda)
-
-# Usage
-
-Create a repository using this template; just runs following command.
-
-```bash
-yarn
-```
+1. Remove `ethers` (`yarn remove ethers`) because that is just an example package.
+2. Edit `index.ts` and install all related packages (e.g., `elliptic` and `@types/elliptic`)
+3. Push the repository and install it as a git package (e.g., `yarn add git@github.com:dev-protocol/template-repos-cjs-esm.git`)

@@ -1,19 +1,20 @@
+import typescript from '@rollup/plugin-typescript'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 
 export default [
 	{
-		input: ['dist/index.js'],
+		input: 'index.ts',
 		output: [
 			{
-				file: 'dist/index.mjs',
+				dir: 'dist',
 				format: 'es',
 			},
-			{
-				file: 'dist/index.cjs',
-				format: 'cjs',
-			},
 		],
-		plugins: [resolve({ browser: true }), commonjs({ browser: true })],
+		plugins: [
+			typescript(),
+			resolve({ browser: true }),
+			commonjs({ browser: true }),
+		],
 	},
 ]
