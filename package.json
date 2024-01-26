@@ -39,7 +39,7 @@
 		"typescript": "5.3.3"
 	},
 	"devDependencies": {
-		"husky": "9.0.5",
+		"husky": "9.0.6",
 		"prettier": "3.2.4"
 	},
 	"repository": {
