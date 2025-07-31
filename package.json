@@ -36,7 +36,7 @@
 		"rimraf": "5.0.10",
 		"rollup": "^4.0.0",
 		"tslib": "^2.6.2",
-		"typescript": "5.8.3"
+		"typescript": "5.9.2"
 	},
 	"devDependencies": {
 		"husky": "9.1.7",
